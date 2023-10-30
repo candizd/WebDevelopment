@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat-Bold';
+    font-weight: 900;
+}
+
+h2 {
+    margin: 15px 0 15px 30px;
+    font-weight: bold;
+    font-size: 2.5rem;
+ 
+}
+
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    overflow-x: hidden;
+    height: 100vh;
+    flex-direction: column
+}
+main {
+    flex:1
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.main-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 50%;
+}
+
+/* Posting Part */
+.post-form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.post-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.post-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+}
+
+.post-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; 
+    cursor: pointer;
+    margin: 0 auto; 
+}
+
+.post-form .content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.separator {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Listing part */
+.post-list {
+    width: 100%; 
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-list h3, .post-list p {
+    word-wrap: break-word; 
+    white-space: pre-line; 
+}
+
+.post-list ul {
+    padding: 0; 
+    list-style: none; 
+}
+
+.post-content {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    resize: none; 
+}
+
+.post-actions {
+    margin: 20px 0;
+}
+
+.post-actions a {
+    text-decoration: none; 
+    margin-right: 10px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 4px; 
+}
+
+.post-actions a:hover {
+    background-color: #555; 
+}
+
+.list-container {
+    margin-bottom: 10px;
+}
+
+#footer {
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Edit Page*/
+
+.edit-div {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 50%;
+    width: 50%;
+}
+
+.edit {
+    width: 100%;
+    height: 100%; 
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit label {
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.edit input[type="text"],
+.edit textarea {
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    resize: none;
+}
+
+.edit-button {
+    text-decoration: none; 
+    margin-right: 10px; 
+    padding: 5px 10px; 
+    border: 1px solid #333; 
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 4px; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+
+    <div class = "main-div">
+
+
+            <section class="post-form">
+
+                <h2>Create a New Post</h2>
+                <hr class="separator">
+                <form action="/create" method="post">
+                    <div class="content-container"> 
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="content-container"> 
+                        <label for = "content">Content:</label>
+                        <textarea id="content" name="content" required></textarea>
+                    </div>   
+                    <button type="submit">Create Post</button>
+                </form>
+
+            </section>
+
+            <section class="post-list">
+
+                <h2>Posts</h2>   
+                <hr class="separator">   
+                <ul>
+                    <% if(locals.posts)  { %>
+                        <% posts.forEach(function(post) { %>
+                            <li>
+                                <div class="list-container"> 
+                                    <h3> Title: <%= post.title %></h3>
+                                </div> 
+                                <div class="list-container"> 
+                                    <p>Post:</p>
+                                    <textarea class="post-content" readonly><%= post.content %></textarea>
+                                </div> 
+                                <div class="post-actions">
+                                    <a href="/edit/<%= post.id %>">Edit</a>
+                                    <a href="/delete/<%= post.id %>">Delete</a>
+                                </div>
+                            </li>
+                        <% }); %>
+                    <%  } %>
+                </ul>
+
+            </section>
+        </main>
+        <%- include("partials/footer.ejs") %>
+    </div>
+
+    

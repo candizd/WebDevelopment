@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+    
+<div class = "edit-div">
+    <section class="edit">
+        <h2>Edit</h2>   
+        <hr class="separator"> 
+        <form action="/edit/<%= post.id %>" method="post">
+            <div class="edit-title"> 
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="<%= post.title %>" required>
+            </div>
+            <div class="edit-content"> 
+                <label for="content">Content:</label>
+                <textarea class="post-content" id="content" name="content" required><%= post.content %></textarea>
+            </div>   
+            <div class="container">
+                <button class = "edit-button" type="submit">Update Post</button>
+            </div>
+        </form>
+    </section>
+</div>
