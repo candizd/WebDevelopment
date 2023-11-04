@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Spotify Web App</title>
+</head>
+
+<body>
+
+    <h1>Display your Spotify profile data</h1>
+    <% if (locals.profile) { %>
+        <section id="profile">
+            <h2>Logged in as <span id="displayName">
+                    <%= profile.display_name %>
+                </span></h2>
+            <img src="<%= profile.images[1].url %>" alt="User Avatar" id="avatar">
+            <ul>
+                <li> <span class="profile-li"> User ID: </span>
+                    <%= profile.id %>
+                </li>
+                <li><span class="profile-li"> Email: </span>
+                    <%= profile.email %>
+                </li>
+                <li> <span class="profile-li"> Spotify URI: </span> <a id="uri"
+                        href="<%= profile.external_urls.spotify %>">
+                        <%= profile.external_urls.spotify %>
+                    </a></li>
+                <li>
+                    <span class="profile-li"> Country: </span>
+                    <%= profile.country %>
+                </li>
+            </ul>
+        </section>
+        <% } %>
+            <% if (locals.playlists) { %>
+                <section id="playlists">
+                    <ul>
+                        <% playlists.items.forEach(playlist=> { %>
+                            <li>
+                                Image: <img src="<%= playlist.images[0].url %>" class="playlist-image"
+                                    alt="Playlist Image">
+                                Playlist Name: <%= playlist.name %><br>
+                            </li>
+                            <br>
+                            <% }); %>
+                    </ul>
+                </section>
+                <% } else { %>
+                    <p>No playlists found.</p>
+                    <% } %>
+
+</body>
+
+</html>
