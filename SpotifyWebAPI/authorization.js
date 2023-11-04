@@ -4,7 +4,6 @@ import SpotifyWebApi from "spotify-web-api-node";
 
 const app = express();
 const port = 5173;
-const API_URL = "https://api.spotify.com";
 
 const scopes = [
     'ugc-image-upload',
@@ -38,9 +37,9 @@ app.get("/", async (req, res) => {
 });
 
 var spotifyApi = new SpotifyWebApi({
-    clientId: '932b2c4799f449758d30896b13cc47dc',
-    clientSecret: 'ec9975ea5d8d4202b03303ed1a3f9daa',
-    redirectUri: 'http://localhost:5173/callback'
+    clientId: '****',
+    clientSecret: '****',
+    redirectUri: '****'
 });
 
 app.get('/login', (req, res) => {
@@ -93,6 +92,6 @@ app.get('/callback', (req, res) => {
 
 app.listen(port, () =>
     console.log(
-        'HTTP Server up. Now go to http://localhost:5173/login in your browser.'
+        'HTTP Server up. Now go to ****/login in your browser.'
     )
 );
